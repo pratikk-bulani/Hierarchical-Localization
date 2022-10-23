@@ -8,5 +8,6 @@ def main(
     pairs = []
     for i in range(len(names_q)-1):
         pairs.append((names_q[i], names_q[i+1]))
+    pairs.append((names_q[0], names_q[-1]))
     with open(output, 'w') as f:
         f.write('\n'.join(' '.join([i, j]) for i, j in pairs))
